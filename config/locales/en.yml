@@ -33,7 +33,7 @@ en:
       comments_count: "%{count}"
       no_user: The user does not exist
     create:
-      successfully: Register successfully
+      successfully: Registered successfully
     update:
       successfully: Profile is successfully saved
       faild: Profile save faild
