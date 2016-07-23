@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :events
+  resources :subscribes
   resources :users, only: [ :new, :create, :update, :edit, :show ] do
 	  member do
 	    get :activate
+      get :subscribing
 	  end
   end
   resources :sessions

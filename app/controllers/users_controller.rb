@@ -31,6 +31,7 @@ class UsersController < ApplicationController
       not_authenticated
     end
   end
+  
   def user_params
     params.require(:user).permit(:name, :email, :password,:password_confirmation)   
   end

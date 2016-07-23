@@ -22,7 +22,8 @@
             <img src="http://api.randomuser.me/portraits/med/men/14.jpg" height="28px" width="28px">            
         </p>  
         <% if current_user && event.user == current_user %><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
-        <% if current_user && event.user == current_user %><%= link_to 'Edit', edit_event_path(event) %><% end %>        
+        <% if current_user && event.user == current_user %><%= link_to 'Edit', edit_event_path(event) %><% end %>    
+        <% if current_user && event.user == current_user %><%= link_to 'Sub', subscribes_path(event_id: event.id), method: :post %><% end %>     
       </div>
     </div>      
   </div><!--/col-->            
