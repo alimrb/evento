@@ -1,0 +1,7 @@
+<%= t('mailer.activation.welcome') %>, <%= @user.name %>
+===============================================
+
+<%= t('mailer.activation.successfully_registered') %>,
+<%= t('mailer.activation.your_username') %>: <%= @user.name %>.
+
+<%= t('mailer.activation.please_follow') %><%= t('mailer.activation.this_link') %><%= t('mailer.activation.complete') %>: <%= @url %>

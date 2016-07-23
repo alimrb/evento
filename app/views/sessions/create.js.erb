@@ -1,0 +1,14 @@
+$('.ui.form').removeClass('loading')
+<% if logged_in? %>
+  Turbolinks.visit('<%= root_path %>');
+<% else %>
+  $('.login-form').find('.field').addClass('error')
+  $errors = $('#login-errors');
+  $errors.addClass('ui error message');
+  <% if @inactivation %>
+    $errors.html($('.errors-info').data('inactivation'));
+  <% else %>
+    $errors.html($('.errors-info').data('error'));
+  <% end %>
+    $errors.transition('tada');
+<% end %>

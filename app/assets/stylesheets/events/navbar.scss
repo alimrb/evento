@@ -1,0 +1,26 @@
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-collapse .container-fluid {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+  color: #44BBE3;
+}
+
+.navbar-default .navbar-nav  li a {
+  color:#FF0000 !important;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+  color:#CCFF00 !important;
+}

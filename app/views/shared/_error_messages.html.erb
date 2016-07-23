@@ -1,0 +1,21 @@
+<% if object.errors.any? %>
+<div id="error_explanation">
+	<div class="ui error message">
+		<i class="close icon"></i>
+		<div class="header">
+			<%= t('.the_form_contains') %> 
+			<% if I18n.locale.to_s == "de" %>
+			<%= object.errors.count %>
+				errors
+			<% else %>
+			<%= pluralize(object.errors.count, "error") %>
+			<% end %>
+		</div>
+		<ul class="list">
+			<% object.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+<% end %>

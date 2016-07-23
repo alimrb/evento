@@ -1,0 +1,45 @@
+<div class="login-form">
+	<div id="login-errors">
+	</div>
+	<%= form_for :session, url: sessions_path, remote: true do |f| %>
+	<div class="ui one column center aligned grid">
+  		<div class="column six wide form-holder">
+    		<h2 class="center aligned header form-head">Login</h2>
+    		<div class="ui form">
+				<div class="field">
+					<div class="ui left icon large input">
+					<%= f.text_field :email, placeholder: "#{t('activerecord.attributes.user.email')}" %>
+					<i class="mail icon"></i>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui left icon large input">
+					<%= f.password_field :password, placeholder: "#{t('activerecord.attributes.user.password')}" %>
+					<i class="lock icon"></i>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui toggle checkbox">
+						<%= f.check_box :remember %>
+						<%= f.label :remember, "#{t('.remember_me')}" %>
+					</div>
+					
+				</div>
+				<%= f.submit "#{t('users.login')}", class: "ui green fluid button" %>
+
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+<div class="errors-info" data-error="<%= t('.invalid_email_password_combination') %>" data-inactivation="<%= t('.inactivation') %>">
+
+</div>
+<div class="small ui modal reset-pwd-form">
+	<i class="close red icon">
+	</i>
+	<div class="content">
+
+	</div>
+</div>

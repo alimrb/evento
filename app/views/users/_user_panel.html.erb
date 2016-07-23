@@ -1,0 +1,32 @@
+<ul class="side-navigation">
+    <li>
+      <a class="logo" href="/">ApplePie</a>
+    </li>
+    <li class="<%= is_active('index') %>">
+      <%= link_to :home, :remote => true do %>
+        <i class="material-icons">library_music</i>
+        <span class="text">Browse</span>
+      <% end %>
+    </li>
+    <li class="<%= is_active('test') %>">
+      <%= link_to :test, :remote => true do %>
+        <i class="fa fa-heart fa-3x"></i>
+        <span class="text">Your Music</span>
+      <% end %>
+    </li>
+    <li class="">
+      <a class="faq" href="/pages/faq">
+        <span class="icon-faq"></span>
+        <span class="text">FAQ</span>
+      </a>
+    </li>
+    <li>
+      <%= link_to :logout,  class: "item" do %>
+        <i class="fa fa-sign-out fa-3x"></i>
+        <%= t('users.logout') %>
+      <% end %>
+    </li>
+</ul>
+<header class="header">
+  <h1>Approach</h1>
+</header>

@@ -1,0 +1,6 @@
+<%= t('mailer.activation.congratz') %>, <%= @user.name %>
+===============================================
+
+<%= t('mailer.subject.done') %>,
+<%= t('mailer.activation.your_username') %>: <%= @user.name %>.
+<%= t('mailer.activation.you_can') %><%= t('mailer.activation.access') %>:<%= @url %>, <%= t('mailer.activation.enjoy') %>!
