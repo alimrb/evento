@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :events
-  resources :users, only: [ :new, :create, :update, :edit, :show ] do
+  resources :users, only: [ :new, :create, :update, :edit, :show, :index ] do
 	  member do
 	    get :activate
 	  end

@@ -1,7 +1,16 @@
 class UsersController < ApplicationController
-	before_action :not_login_user, only: [ :new, :create ]
+	before_action :not_login_user, only: [:show, :new, :create ]
   
-	def new
+	def index
+    @users = User.all
+  end
+
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def new
 		@user = User.new
 		@signup = true
 	end

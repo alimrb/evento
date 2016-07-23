@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Events</h1>
+<br>
+
+<div class="row">
+<% @users.each do |user| %>  
+  <div class="col-sm-8 col-xs-6 eventc">        
+    <div class="panel panel-default">  
+      <div class="panel-thumbnail">
+        <img src="assets/user" class="img-fixed2">
+      </div>                       
+      <div class="panel-body">            
+        <p class="title"><%= link_to user.name, user %></p>  
+        <p><%= user.name %></p>
+        <p><%= user.email %></p>                                             
+      </div>
+    </div>      
+  </div><!--/col-->            
+  <% end %>                    
+</div>
