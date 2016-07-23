@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160723124706) do
     t.string   "title"
     t.string   "venue"
     t.string   "pic"
-    t.datetime "starts_at",  default: '2016-07-22 22:21:45', null: false
+    t.datetime "starts_at",  default: '2016-07-23 12:27:27', null: false
     t.integer  "user_id"
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false

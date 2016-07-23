@@ -19,6 +19,16 @@
   <strong>Pic:</strong>
   <%= @event.pic %>
 </p>
+<p>
+
+
+
+<% @event.subscribes.each do |subscribe| %>
+<p>
+<%= subscribe.user.name%>
+</p>
+<% end %> 
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
