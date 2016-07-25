@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password,:password_confirmation)   
   end
   def not_login_user
-    if logged_in?
+    if logged_in? and !current_user
       redirect_to root_path
       flash[:warning] = "#{t('users.has_already_logged_in')}"
     end
