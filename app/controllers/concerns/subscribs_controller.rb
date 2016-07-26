@@ -1,1 +1,0 @@
-subscribs_controller.rb
