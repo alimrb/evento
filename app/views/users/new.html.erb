@@ -5,8 +5,9 @@
 	<%= form_for @user, remote: true do |f| %>
 	<div class="ui one column center aligned grid">
   		<div class="column six wide form-holder">
-    		<h2 class="center aligned header form-head">Create account</h2>
+    		
     		<div class="ui form">
+    		<h2 class="formtitle">Create account</h2>
       			<div class="field">
 					<div class="ui left icon large input">
 						<%= f.text_field :name, placeholder: "#{t('activerecord.attributes.user.name')}" %>

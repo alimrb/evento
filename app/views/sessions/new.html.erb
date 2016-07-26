@@ -4,8 +4,9 @@
 	<%= form_for :session, url: sessions_path, remote: true do |f| %>
 	<div class="ui one column center aligned grid">
   		<div class="column six wide form-holder">
-    		<h2 class="center aligned header form-head">Login</h2>
+    		
     		<div class="ui form">
+    		<h2 class="formtitle">Log into Evento</h2>
 				<div class="field">
 					<div class="ui left icon large input">
 					<%= f.text_field :email, placeholder: "#{t('activerecord.attributes.user.email')}" %>
@@ -20,8 +21,9 @@
 				</div>
 				<div class="field">
 					<div class="ui toggle checkbox">
-						<%= f.check_box :remember %>
 						<%= f.label :remember, "#{t('.remember_me')}" %>
+						<%= f.check_box :remember %>
+						
 					</div>
 					
 				</div>

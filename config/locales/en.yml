@@ -41,7 +41,7 @@ en:
       activated: User was successfully activated
   sessions:
     new:
-      remember_me: Remember me
+      remember_me: Remember me            
       forget_password: Forget password
       invalid_email_password_combination: Invalid Email Password combination
       inactivation: User is inactivation
