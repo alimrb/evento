@@ -17,6 +17,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    Rails.logger.info @user.valid?
+    Rails.logger.info @user.errors
     if @user.save
       @user.activate!
       flash[:success] = "#{t('.successfully')}"
@@ -42,7 +44,7 @@ class UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:user).permit(:name, :email, :password,:password_confirmation)   
+    params.require(:user).permit(:name, :email, :password,:password_confirmation)
   end
   
   def not_login_user
