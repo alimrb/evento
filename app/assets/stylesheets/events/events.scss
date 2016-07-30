@@ -52,7 +52,11 @@ body{
   padding-bottom: 3rem;
   background-color: #f7f7f7;
 }
-
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
 .card {
   float: left;
   width: 33.333%;
@@ -87,12 +91,6 @@ footer p {
   width: 358px;
   height: 245px;
 }
-
-.img-fixed2 {
-  display: block;
-  height: 245px;
-}
-
 
 .title {
   font-size: 24px;

@@ -68,9 +68,7 @@ class EventsController < ApplicationController
          if current_user.nil?
             redirect_to login_url, alert: "Not authorized! Please log in."
          else
-            if @event && @event.user != current_user
-              redirect_to root_path, alert: "Not authorized! Only #{@event.user} has access to this event."
-            end
+            
          end
     end
 

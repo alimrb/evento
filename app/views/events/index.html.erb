@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <% if current_user %> <%= link_to( image_tag( "plus.png" , {size: '30x30'}), new_event_path) %><% end %>
 
@@ -7,7 +7,7 @@
   <div class="col-sm-8 col-xs-6 eventc">        
     <div class="panel panel-default">          
       <div class="panel-thumbnail">
-        <img src="assets/event" class="img-fixed2">
+        <img src="<%= event.pic %>" class="img-fixed">
       </div>          
       <div class="panel-body">            
         <p class="title"><%= link_to event.title, event %></p>            
@@ -19,8 +19,9 @@
             <img src="http://api.randomuser.me/portraits/med/men/14.jpg" height="28px" width="28px">            
         </p>  
         <% if current_user && event.user == current_user %><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
-        <% if current_user && event.user == current_user %><%= link_to 'Edit', edit_event_path(event) %><% end %>    
-        <% if current_user && event.user == current_user %><%= link_to 'Sub', subscribes_path(event_id: event.id), method: :post %><% end %>
+        <% if event.user == current_user %><%= link_to 'Edit', edit_event_path(event) %><% end %>    
+        <% if current_user && !current_user.subscribed?(event)%><%= link_to 'Subscribe', subscribes_path(event_id: event.id), method: :post %>
+        <% end %>
       </div>
     </div>      
   </div><!--/col-->            

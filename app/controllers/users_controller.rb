@@ -44,6 +44,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password,:password_confirmation)   
   end
+  
   def not_login_user
     if logged_in? and !current_user
       redirect_to root_path
