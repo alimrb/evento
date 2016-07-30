@@ -1,29 +1,33 @@
 Evento
 ======
 
-For people who want to organize public events with their local community **Evento** is a simple event organizing tool.
+**Evento** is a simple event organizing tool for people who want to organize public events with their local community.
 
-Unlike Facebook **Evento** does not require registration to join public events.
+Evento is a project developed as part of the Munich chapter of  "[Refugees on Rails](http://refugeesonrails.org/en/)" training program. 
 
-Evento is a project developed as part of the Munich chapter of "Refugees on Rails" training program. 
 
-http://refugeesonrails.org/en/
-
-Setup information
+Installation
 -----------------
-
-Environment setup informations:
-
-https://github.com/FirehoseWeekend/install-guide
-
+#### Clone project
 ```
-$ bundle install
-$ rake db:create:all
-$ rails server
+git clone git@github.com:rorlika/evento.git
+cd evento
 ```
+#### Install dependencies
+```
+bundle install
+```
+#### Run migrations
+```
+rake db:migrate
+```
+#### Run server
+```
+rails server
+```
+## Requirements 
+* rails version >= 4.2.5
+* ruby version >=  2.2.3
+* postgresql 
 
-Task board
-----------
-
-https://trello.com/b/W6YySfgJ/evento
 
